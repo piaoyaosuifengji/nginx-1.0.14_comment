@@ -388,9 +388,10 @@ struct ngx_http_request_s {
                                          /* of ngx_http_upstream_state_t */
 
     ngx_pool_t                       *pool;     //连接池
-    ngx_buf_t                        *header_in;
+    ngx_buf_t                        *header_in;/*接收HTTP头部的缓冲区*//*header_in指向Nginx收到的未经解析的HTTP头部*/
 
-    ngx_http_headers_in_t             headers_in; //request的header,/*header_in指向Nginx收到的未经解析的HTTP头部*/
+    ngx_http_headers_in_t             headers_in; //request的header,
+						
     ngx_http_headers_out_t            headers_out; //response的header，使用ngx_http_send_header发送
 
     ngx_http_request_body_t          *request_body; //response的body
