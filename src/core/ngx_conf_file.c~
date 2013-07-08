@@ -403,7 +403,7 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 
             if (cmd->type & NGX_DIRECT_CONF) {
 				//我们还记得最开始ctx是包含了所有core模块的conf(create_conf回调),因此这里取出对应的模块conf.
-                conf = ((void **) cf->ctx)[ngx_modules[i]->index];/*/模块的配置信息*/
+                conf = ((void **) cf->ctx)[ngx_modules[i]->index];
 
             } else if (cmd->type & NGX_MAIN_CONF) {
             	//如果不是DIRECT_CONF并且是MAIN，则说明我们需要在配置中创建自己模块的上下文(也就是需要进入二级模块)

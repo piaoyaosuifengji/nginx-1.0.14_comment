@@ -56,22 +56,7 @@ typedef struct {
 #define NGX_HTTP_SIF_CONF         0x20000000
 #define NGX_HTTP_LIF_CONF         0x40000000
 #define NGX_HTTP_LMT_CONF         0x80000000
-/*结构体成员type是标识的集合，表明这个指令在哪里出现是合法的、指令的参数有几个。应用中，标识一般是下面多个值的BIT或： 
 
-    * NGX_HTTP_MAIN_CONF: 指令出现在main配置部分是合法的
-    * NGX_HTTP_SRV_CONF: 指令在server配置部分出现是合法的 config
-    * NGX_HTTP_LOC_CONF: 指令在location配置部分出现是合法的
-    * NGX_HTTP_UPS_CONF: 指令在upstream配置部分出现是合法的 
-
-    * NGX_CONF_NOARGS: 指令没有参数
-    * NGX_CONF_TAKE1: 指令读入1个参数
-    * NGX_CONF_TAKE2: 指令读入2个参数
-    * ...
-    * NGX_CONF_TAKE7: 指令读入7个参数 
-
-    * NGX_CONF_FLAG: 指令读入1个布尔型数据 ("on" or "off")
-    * NGX_CONF_1MORE: 指令至少读入1个参数
-    * NGX_CONF_2MORE: 指令至少读入2个参数 */
 
 #define NGX_HTTP_MAIN_CONF_OFFSET  offsetof(ngx_http_conf_ctx_t, main_conf)
 #define NGX_HTTP_SRV_CONF_OFFSET   offsetof(ngx_http_conf_ctx_t, srv_conf)
