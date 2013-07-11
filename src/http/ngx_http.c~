@@ -570,7 +570,7 @@ ngx_http_init_phase_handlers(ngx_conf_t *cf, ngx_http_core_main_conf_t *cmcf)
 
         case NGX_HTTP_POST_ACCESS_PHASE:
             if (use_access) {
-                ph->checker = ngx_http_core_post_access_phase;/*用于对access phase做收尾处理*/
+                ph->checker = ngx_http_core_post_access_phase;
                 ph->next = n;
                 ph++;
             }

@@ -1596,7 +1596,7 @@ ngx_http_process_request_header(ngx_http_request_t *r)
     return NGX_OK;
 }
 
-/*  这个函数驱动请求的处理，并为处理做些准备。*/
+
 static void
 ngx_http_process_request(ngx_http_request_t *r)
 {

@@ -205,7 +205,7 @@ NGX_AGAIN,NGX_DONE：请求已经被正确处理，同时请求被挂起，直�
         if (index[i].values == NULL) {
 
             /* index[i].name.len includes the terminating '\0' */
-/*	就是将index[i].name.data复制到name中去*/
+	就是将index[i].name.data复制到name中去
             ngx_memcpy(name, index[i].name.data, index[i].name.len);
 
             path.len = (name + index[i].name.len - 1) - path.data;

@@ -241,7 +241,7 @@ ngx_http_static_handler(ngx_http_request_t *r)
         return rc;
     }
 
-    //发送的是一个文件
+	//发送的是一个文件
     b->file_pos = 0;
     b->file_last = of.size;
 

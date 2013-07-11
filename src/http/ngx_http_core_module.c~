@@ -1438,7 +1438,7 @@ ngx_http_core_content_phase
 
     ngx_log_error(NGX_LOG_ERR, r->connection->log, 0, "no handler found");
 
-    ngx_http_finalize_request(r, NGX_HTTP_NOT_FOUND);/*这个函数就是用来释放request的，比如request相关的内存池，比如需要返回的一些状态码，比如需要断开连接等等操作*/
+    ngx_http_finalize_request(r, NGX_HTTP_NOT_FOUND);
     return NGX_OK;
 }
 
